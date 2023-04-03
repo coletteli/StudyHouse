@@ -169,12 +169,14 @@
 </style>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+
 <img src="logout.png" alt="logout" class="logout_button" on:click={logout}>
 {#if $SessionStore.inSession}
     <InSession/>
 {:else}
     <div class="buffer"></div>
     <div class="big">
+        
         <div class="left-side">
             <button id='studyhouseStartButton' on:click={startSessionModal} class="button" disabled>Turn On The StudyHouse Extension</button>
             <br>
@@ -195,13 +197,17 @@
             {/if}
         </div>
         <div class="right-side">
-            <div class="coin-bar">
-                <img src="coin-icon.png" alt="coin-icon" class="coin-icon"> 
-                <div class="coin-value">{ $UserInfoStore.coins }</div>
-            </div>
             
+            
+            <button class="button" on:click={customizationModal}>Inventory</button>
+            <br>
             <button class="button" on:click={customizationModal}>Customize Study House</button>
         </div>
+    </div>
+
+    <div class="coin-bar">
+        <img src="coin-icon.png" alt="coin-icon" class="coin-icon"> 
+        <div class="coin-value">{ $UserInfoStore.coins }</div>
     </div>
     
     
