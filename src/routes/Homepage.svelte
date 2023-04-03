@@ -196,6 +196,7 @@
         </div>
         <div class="right-side">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
             
             <button class="button" on:click={customizationModal}>Customize Study House</button>
@@ -211,10 +212,20 @@
             <button class="button" on:click={customizationModal}>Store</button>
         </div>
     </div>
+=======
+            <button class="button" on:click={customizationModal}>Inventory</button>
+            <br>
+            <button class="button" on:click={customizationModal}>Customize Study House</button>
+        </div>
+    </div>
+>>>>>>> Stashed changes
     <div class="coin-bar">
         <img src="coin-icon.png" alt="coin-icon" class="coin-icon"> 
         <div class="coin-value">{ $UserInfoStore.coins }</div>
     </div>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     
 {/if}
