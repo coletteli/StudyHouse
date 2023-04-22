@@ -6,6 +6,12 @@
     import CustomizationModal from './components/CustomizationModal.svelte';
     import { writable } from 'svelte/store';
     import Modal from 'svelte-simple-modal';
+<<<<<<< Updated upstream
+=======
+    import ProfileModal from './components/ProfileModal.svelte';
+    import AboutModal from './components/AboutModal.svelte';
+
+>>>>>>> Stashed changes
 
     const modal = writable(null);
     let currModal = "";
@@ -32,6 +38,19 @@
                 // @ts-ignore
                 modal.set(CustomizationModal);
             }
+<<<<<<< Updated upstream
+=======
+            if ($SessionStore.modalType == "profile") {
+                // @ts-ignore
+                modal.set(ProfileModal);
+            }
+
+            if ($SessionStore.modalType == "about") {
+                // @ts-ignore
+                modal.set(AboutModal);
+            }
+
+>>>>>>> Stashed changes
             currModal = $SessionStore.modalType;
             counter = $SessionStore.counter;
         }

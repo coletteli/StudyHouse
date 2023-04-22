@@ -78,6 +78,30 @@
             }
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    const aboutModal = () => {
+        SessionStore.set({
+            inSession: false,
+            sessionLength: 0,
+            modalType: "about",
+            counter: $SessionStore.counter+1,
+            sessionActivity: ""
+        });
+    };
+
+    const profileModal = () => {
+        SessionStore.set({
+            inSession: $SessionStore.inSession,
+            sessionLength: $SessionStore.sessionLength,
+            modalType: "profile",
+            counter: $SessionStore.counter+1,
+            sessionActivity: $SessionStore.sessionActivity
+        });
+    };
+
+>>>>>>> Stashed changes
 </script>
 
 <style>
@@ -165,11 +189,23 @@
         color: #DC83A4;
         padding-left: 3rem;
         font-size: 2rem;
+
     }
+    #aboutButton {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
 </style>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+<<<<<<< Updated upstream
 <img src="logout.png" alt="logout" class="logout_button" on:click={logout}>
+=======
+<img src="logout.png" alt="logout" class="logout_button" on:click={logout}> 
+<button id='aboutButton' on:click={aboutModal} class="button">About</button>
+>>>>>>> Stashed changes
 {#if $SessionStore.inSession}
     <InSession/>
 {:else}
